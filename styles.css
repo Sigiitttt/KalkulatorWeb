@@ -1,0 +1,30 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.calculator .card-body {
+    padding: 20px;
+}
+
+#display {
+    height: 100px;
+    font-size: 36px;
+    border: none;
+    background-color: #878787;
+}
+
+.btn-group .btn {
+    width: 25%;
+    height: 80px;
+    font-size: 28px;
+}
+
+.btn-group .btn-lg {
+    border-radius: 0;
+}

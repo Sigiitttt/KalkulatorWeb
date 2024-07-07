@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="calculator card mt-5">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="display" class="form-control text-right" disabled>
+                        </div>
+                        <div class="btn-group-vertical w-100">
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('1')">1</button>
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('2')">2</button>
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('3')">3</button>
+                                <button class="btn btn-info btn-lg" onclick="chooseOperation('+')">+</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('4')">4</button>
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('5')">5</button>
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('6')">6</button>
+                                <button class="btn btn-info btn-lg" onclick="chooseOperation('-')">-</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('7')">7</button>
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('8')">8</button>
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('9')">9</button>
+                                <button class="btn btn-info btn-lg" onclick="chooseOperation('*')">*</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('0')">0</button>
+                                <button class="btn btn-danger btn-lg" onclick="clearDisplay()">C</button>
+                                <button class="btn btn-warning btn-lg" onclick="compute()">=</button>
+                                <button class="btn btn-info btn-lg" onclick="chooseOperation('/')">/</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
