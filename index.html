@@ -4,56 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Calculator</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Kalkulator Keren</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="calculator card mt-5">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <input type="text" id="display" class="form-control text-right" disabled>
-                        </div>
-                        <div class="btn-group-vertical w-100">
-                            <div class="btn-group">
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('1')">1</button>
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('2')">2</button>
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('3')">3</button>
-                                <button class="btn btn-info btn-lg" onclick="chooseOperation('+')">+</button>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('4')">4</button>
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('5')">5</button>
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('6')">6</button>
-                                <button class="btn btn-info btn-lg" onclick="chooseOperation('-')">-</button>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('7')">7</button>
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('8')">8</button>
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('9')">9</button>
-                                <button class="btn btn-info btn-lg" onclick="chooseOperation('*')">*</button>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn btn-secondary btn-lg" onclick="appendNumber('0')">0</button>
-                                <button class="btn btn-danger btn-lg" onclick="clearDisplay()">C</button>
-                                <button class="btn btn-warning btn-lg" onclick="compute()">=</button>
-                                <button class="btn btn-info btn-lg" onclick="chooseOperation('/')">/</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="keys">
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+            <button class="operator" onclick="press('+')">+</button>
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button class="operator" onclick="press('-')">-</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button class="operator" onclick="press('*')">x</button>
+            <button onclick="press('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculate()">=</button>
+            <button class="operator" onclick="press('/')">/</button>
         </div>
     </div>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 
