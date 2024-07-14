@@ -1,56 +1,17 @@
-let currentNumber = '';
-let previousNumber = '';
-let operation = undefined;
+let display = document.getElementById('display');
 
-function appendNumber(number) {
-    currentNumber = currentNumber.toString() + number.toString();
-    updateDisplay();
+function press(num) {
+    display.value = display.value + num;
 }
 
-function updateDisplay() {
-    document.getElementById('display').value = currentNumber;
+function calculate() {
+    try {
+        display.value = eval(display.value);
+    } catch (e) {
+        display.value = 'Error';
+    }
 }
 
 function clearDisplay() {
-    currentNumber = '';
-    previousNumber = '';
-    operation = undefined;
-    updateDisplay();
-}
-
-function chooseOperation(op) {
-    if (currentNumber === '') return;
-    if (previousNumber !== '') {
-        compute();
-    }
-    operation = op;
-    previousNumber = currentNumber;
-    currentNumber = '';
-}
-
-function compute() {
-    let computation;
-    const prev = parseFloat(previousNumber);
-    const current = parseFloat(currentNumber);
-    if (isNaN(prev) || isNaN(current)) return;
-    switch (operation) {
-        case '+':
-            computation = prev + current;
-            break;
-        case '-':
-            computation = prev - current;
-            break;
-        case '*':
-            computation = prev * current;
-            break;
-        case '/':
-            computation = prev / current;
-            break;
-        default:
-            return;
-    }
-    currentNumber = computation;
-    operation = undefined;
-    previousNumber = '';
-    updateDisplay();
+    display.value = '';
 }
